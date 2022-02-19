@@ -10,6 +10,7 @@ Router generates a list of URLs, which we then include in path with the include 
 """
 router = DefaultRouter()
 router.register('hello-viewset', views.HelloViewSet, base_name='hello-viewset')
+router.register('profile', views.UserProfileViewSet)
 
 urlpatterns = [
     path('hello-view/', views.HelloApiView.as_view()),
